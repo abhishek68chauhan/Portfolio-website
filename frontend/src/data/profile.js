@@ -29,9 +29,9 @@ export const profile = {
     social: {
         github: "https://github.com/abhishek68chauhan",
 
-        linkedin: "YOUR_LINKEDIN_URL",
+        linkedin: "https://www.linkedin.com/in/abhishek-68-chauhan/",
 
-        instagram: "YOUR_INSTAGRAM_URL",
+        instagram: "https://www.instagram.com/abhishek_2014_chauhan/",
 
         facebook: "YOUR_FACEBOOK_URL",
     },
