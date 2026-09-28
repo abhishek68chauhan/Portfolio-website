@@ -22,7 +22,7 @@ export const profile = {
     degree:
         "B.Tech — Computer Science and Engineering",
 
-    photo: "/profile.jpg",
+    photo: "profile.jpg",
 
     resume: "/resume.pdf",
 
