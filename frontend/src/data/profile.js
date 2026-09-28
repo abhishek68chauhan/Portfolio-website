@@ -33,7 +33,7 @@ export const profile = {
 
         instagram: "https://www.instagram.com/abhishek_2014_chauhan/",
 
-        facebook: "YOUR_FACEBOOK_URL",
+        facebook: "https://www.facebook.com/Abhishek68chauhan/",
     },
 };
 
