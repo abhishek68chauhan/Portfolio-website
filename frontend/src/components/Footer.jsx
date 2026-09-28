@@ -98,7 +98,8 @@ function Footer() {
       <div className="footer-bottom container">
 
         <p>
-          © {new Date().getFullYear()} {profile.name}
+          {/* © {new Date().getFullYear()} {profile.name} */}
+          www.abhishekchauhan.com
         </p>
 
         <p>
