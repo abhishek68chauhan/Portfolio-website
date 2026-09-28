@@ -5,9 +5,9 @@ export const profile = {
 
     subtitle: "MERN Stack Developer",
 
-    email: "YOUR_EMAIL@gmail.com",
+    email: "abhishekchauhan.06082004@gmail.com",
 
-    phone: "+91 XXXXX XXXXX",
+    phone: "+91 96216 99189",
 
     location: "India",
 
