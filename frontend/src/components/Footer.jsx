@@ -102,7 +102,7 @@ function Footer() {
         </p>
 
         <p>
-          All Rights Reserved.
+          © {new Date().getFullYear()} {profile.name}  | Software Developer
         </p>
 
       </div>
