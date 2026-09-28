@@ -24,7 +24,7 @@ export const profile = {
 
     photo: "profile.jpg",
 
-    resume: "/resume.pdf",
+    resume: "/resume.jpg",
 
     social: {
         github: "https://github.com/abhishek68chauhan",
