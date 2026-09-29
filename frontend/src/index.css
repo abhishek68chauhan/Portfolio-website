@@ -8,7 +8,7 @@
   --bg: #080b11;
   --card: #0d1118;
   --card2: #111722;
-  --border: rgba(255,255,255,.10);
+  --border: rgba(255, 255, 255, .10);
   --text: #f7f8fb;
   --muted: #9aa4b2;
   --blue: #65a8ff;
@@ -49,10 +49,8 @@ img {
 }
 
 .container {
-  width: min(
-    1160px,
-    calc(100% - 40px)
-  );
+  width: min(1160px,
+      calc(100% - 40px));
 
   margin: auto;
 }
@@ -218,7 +216,7 @@ img {
   color: #7f8998;
 }
 
-.hero-content > p {
+.hero-content>p {
   color: var(--muted);
 
   max-width: 650px;
@@ -255,11 +253,9 @@ img {
 
 .primary-button {
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       var(--blue),
-      var(--purple)
-    );
+      var(--purple));
 
   color: #07101d;
 
@@ -335,17 +331,14 @@ img {
   border-radius: 28px;
 
   background:
-    linear-gradient(
-      145deg,
-      rgba(101,168,255,.2),
-      rgba(139,124,255,.04)
-    );
+    linear-gradient(145deg,
+      rgba(101, 168, 255, .2),
+      rgba(139, 124, 255, .04));
 
   transform: rotate(2deg);
 
   box-shadow:
-    0 30px 80px
-    rgba(0,0,0,.5);
+    0 30px 80px rgba(0, 0, 0, .5);
 }
 
 .photo-frame img {
@@ -415,11 +408,9 @@ img {
 
 .project-card {
   background:
-    linear-gradient(
-      180deg,
+    linear-gradient(180deg,
       #0d1118,
-      #090c11
-    );
+      #090c11);
 
   border:
     1px solid var(--border);
@@ -435,7 +426,7 @@ img {
   transform: translateY(-5px);
 
   border-color:
-    rgba(101,168,255,.4);
+    rgba(101, 168, 255, .4);
 }
 
 .project-image {
@@ -959,7 +950,7 @@ img {
   max-width: 430px;
 }
 
-.footer-grid > div > a {
+.footer-grid>div>a {
   display: block;
 
   color: #8994a4;
@@ -969,7 +960,7 @@ img {
   font-size: .9rem;
 }
 
-.footer-grid > div > a:hover {
+.footer-grid>div>a:hover {
   color: white;
 }
 
@@ -1089,4 +1080,25 @@ img {
   .about-info strong {
     text-align: left;
   }
+}
+
+.detail-block {
+  margin-top: 40px;
+}
+
+.detail-block h2 {
+  margin-bottom: 15px;
+}
+
+.detail-block p {
+  line-height: 1.8;
+}
+
+.feature-list {
+  padding-left: 22px;
+  line-height: 2;
+}
+
+.feature-list li {
+  margin-bottom: 6px;
 }
