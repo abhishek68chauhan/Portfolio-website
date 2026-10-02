@@ -1,6 +1,4 @@
 
-import { useEffect, useState } from "react";
-
 import {
   ArrowLeft,
   ExternalLink,
@@ -13,32 +11,13 @@ import {
   useParams,
 } from "react-router-dom";
 
-import api from "../api";
+import { projects } from "../data/projects";
 
 function ProjectDetails() {
   const { id } = useParams();
-
-  const [project, setProject] = useState(null);
-
-  useEffect(() => {
-    api
-      .get("/projects")
-      .then((response) => {
-        const found = response.data.find(
-          (item) => String(item._id) === String(id)
-        );
-
-        console.log("Project:", found);
-
-        setProject(found);
-      })
-      .catch((error) => {
-        console.error(
-          "Failed to fetch project:",
-          error
-        );
-      });
-  }, [id]);
+  const project = projects.find(
+    (item) => String(item._id) === String(id)
+  );
 
   if (!project) {
     return (

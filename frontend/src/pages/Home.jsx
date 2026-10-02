@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import {
   ArrowRight,
   Download,
@@ -14,25 +12,9 @@ import { profile } from "../data/profile";
 import SocialLinks from "../components/SocialLinks";
 import ProjectCard from "../components/ProjectCard";
 import SectionTitle from "../components/SectionTitle";
-
-import api from "../api";
+import { projects } from "../data/projects";
 
 function Home() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    api
-      .get("/projects")
-      .then((response) => {
-        setProjects(
-          response.data.slice(0, 3)
-        );
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
   return (
     <>
 
@@ -137,7 +119,7 @@ function Home() {
 
           <div className="projects-grid">
 
-            {projects.map(
+            {projects.slice(0, 3).map(
               (project) => (
                 <ProjectCard
                   key={project._id}

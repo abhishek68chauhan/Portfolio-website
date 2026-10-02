@@ -11,8 +11,6 @@ import { profile } from "../data/profile";
 import SocialLinks from "../components/SocialLinks";
 import SectionTitle from "../components/SectionTitle";
 
-import api from "../api";
-
 function Contact() {
 
   const [form, setForm] = useState({
@@ -42,14 +40,21 @@ function Contact() {
 
     try {
 
-      const response =
-        await api.post(
-          "/contact",
-          form
-        );
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message);
+      }
 
       setStatus(
-        response.data.message
+        result.message
       );
 
       setForm({
@@ -58,7 +63,7 @@ function Contact() {
         message: "",
       });
 
-    } catch (error) {
+    } catch {
 
       setStatus(
         "Failed to send message."
