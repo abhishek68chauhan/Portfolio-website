@@ -1,4 +1,6 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const recipientEmail = "abhishekchauhan.06082004@gmail.com";
+const senderEmail = "onboarding@resend.dev";
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -22,10 +24,10 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: "Please check the submitted fields." });
     }
 
-    const { RESEND_API_KEY, RESEND_FROM_EMAIL, RESEND_TO_EMAIL } = process.env;
+    const { RESEND_API_KEY } = process.env;
 
-    if (!RESEND_API_KEY || !RESEND_FROM_EMAIL || !RESEND_TO_EMAIL) {
-        console.error("Resend environment variables are not configured.");
+    if (!RESEND_API_KEY) {
+        console.error("RESEND_API_KEY is not configured.");
         return res.status(500).json({ message: "Email service is not configured." });
     }
 
@@ -37,8 +39,8 @@ export default async function handler(req, res) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                from: RESEND_FROM_EMAIL,
-                to: [RESEND_TO_EMAIL],
+                from: senderEmail,
+                to: [recipientEmail],
                 reply_to: cleanEmail,
                 subject: "New portfolio contact message",
                 text: `Name: ${cleanName}\nEmail: ${cleanEmail}\n\nMessage:\n${cleanMessage}`,
