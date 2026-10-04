@@ -16,7 +16,7 @@ function Resume() {
         </span>
 
         <h1>
-          My professional resume.
+          My professional resume
         </h1>
 
         <p>
