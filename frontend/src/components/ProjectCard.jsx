@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
           />
         ) : (
           <div className="project-placeholder">
-            PROJECT
+            PROJECT.
           </div>
         )}
 
