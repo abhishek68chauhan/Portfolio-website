@@ -55,7 +55,7 @@ function Header() {
             onClick={() => setOpen(false)}
           >
             <Download size={16} />
-            Resume
+            Resume.
           </Link>
 
         </nav>
