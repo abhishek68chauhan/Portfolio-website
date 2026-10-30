@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
           />
         ) : (
           <div className="project-placeholder">
-              <img src="/project.png" alt="Project Preview" />
+              <img src="/project-shop.png" alt="Project Preview" />
 
           </div>
         )}
