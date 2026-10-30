@@ -26,7 +26,7 @@ function ProjectCard({ project }) {
 
       <div className="project-content">
 
-        <small>FULL STACK PROJECT.</small>
+        <small>FULL STACK PROJECT</small>
 
         <h3>{project.title}</h3>
 
